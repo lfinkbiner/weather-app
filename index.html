@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="search-city">
+            <input type="search" id="city-input" placeholder="🔍" autofocus="on">
+            <input type="submit" value="search">
+        </form>
+        <button id="current">Current City</button>
+        <h1 id="city">
+            </h1id>
+        </h1>
+        <h2 id="temp">
+            </h2id>
+        </h2>
+        <ul>
+            <li>
+                <strong>Mon</strong>72°F ☁️
+            </li>
+            <li>
+                <strong>Tu</strong>77°F ☀️
+            </li>
+            <li>
+                <strong>W</strong>68°F 🌧
+            </li>
+            <li>
+                <strong>Th</strong>65°F 🌤
+            </li>
+            <li>
+                <strong>F</strong>75°F ☀️
+            </li>
+        </ul>
+        <p id="date"></p>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+h1 {
+  padding: 15px 0 0 30px;
+}
+h2 {
+  padding: 15px 0 75px 55px;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline;
+  text-align: center;
+  padding: 5px;
+}
+.container {
+  padding: 15px;
+  border: 2px solid purple;
+}
+input {
+  padding: 5px;
+  border: 1px solid blue;
+  width: 100%;
+}
