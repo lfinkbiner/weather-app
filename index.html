@@ -13,71 +13,49 @@
 
 <body>
     <div class="container">
+        <div class= "weather-app">
         <form id="search-city">
             <input type="search" id="city-input" placeholder="🔍" autofocus="on">
             <input type="submit" value="search">
         </form>
         <button id="current" class="btn btn-primary">Current City</button>
-        <h1 id="city">
-            </h1id>
-        </h1>
+        <h1 id="city"></h1>
         <ul>
-            <li>
-                Friday 1:23
-            </li>
-            <li>
-                Clear
-            </li>
+            <li id ="day"></li>
+            <li id="description"></li>
         </ul>
         <div class="row">
             <div class="col-6">
-                ☀️ 12°C | °F
+                <div class= "clearfix weather-temperature">
+                    <img 
+                        src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" 
+                        alt="Clear"
+                        id= "icon"
+                        class="float-left"
+                    />
+                    <strong id="temp"></strong>
+                    <span class= "units">
+                            °C | <a href="#">°F</a>
+                    </span>
+                </div>
             </div>
             <div class="col-6">
                 <ul>
                     <li>
-                        Percipitation
+                        Humidity: <span id ="humidity"></span>%
                     </li>
                     <li>
-                        Humidity
-                    </li>
-                    <li>
-                        Wind
+                        Wind: <span id= "wind"></span>km/hr
                     </li>
                 </ul>
-
             </div>
-
         </div>
-        <!---<h2 id="date">--->
-            <h2id>
-        </h2>
-        <h3 id="temp">
-            </h3id>
-        </h3>
-        <ul>
-            <!--<li>
-                <strong>Mon</strong>72°F ☁️
-            </li>
-            <li>
-                <strong>Tu</strong>77°F ☀️
-            </li>
-            <li>
-                <strong>W</strong>68°F 🌧
-            </li>
-            <li>
-                <strong>Th</strong>65°F 🌤
-            </li>
-            <li>
-                <strong>F</strong>75°F ☀️
-            </li>
-        </ul>-->
-        
-        
-    </div>
+        </div>
     <a href="https://github.com/lfinkbiner/weather-app" target="_blank">
         Open Source Code by Lynn Finkbiner
     </a>
+    </div>
+    
     <script src="src/index.js"></script>
 </body>
 

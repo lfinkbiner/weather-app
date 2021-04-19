@@ -1,6 +1,10 @@
-h1 {
-  padding: 15px 0 0 30px;
+.weather-app {
+  max-width: 600px;
+  border: 2px solid purple;
+  padding: 20px;
+  border-radius: 5px;
 }
+
 h2 {
   padding: 15px 0 75px 55px;
 }
@@ -13,11 +17,7 @@ li {
   margin: 0;
   padding: 0;
 }
-.container {
-  max-width: 600px;
-  padding: 15px;
-  border: 2px solid purple;
-}
+
 input {
   padding: 5px;
   border: 1px solid blue;
@@ -25,4 +25,20 @@ input {
 }
 .btn-primary {
   margin-top: 5px;
+}
+
+.weather-temperature img {
+  margin-right: 10px;
+}
+
+.weather-temperature strong {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
 }
