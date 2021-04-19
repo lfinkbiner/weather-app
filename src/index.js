@@ -1,6 +1,6 @@
 function currentDay() {
   let now = new Date();
-  let p = document.querySelector("p");
+  let h2 = document.querySelector("h2");
   let days = [
     "Sunday",
     "Monday",
@@ -13,7 +13,7 @@ function currentDay() {
   let day = days[now.getDay()];
   let hour = now.getHours();
   let minute = now.getMinutes();
-  p.innerHTML = `${day} ${hour}:${minute}`;
+  h2.innerHTML = `${day} ${hour}:${minute}`;
 }
 currentDay();
 
