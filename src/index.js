@@ -30,6 +30,9 @@ function showWeather(response) {
   let humidityElement= document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement =document.querySelector("#icon");
+
+  celsiusTemperature = Math.round(response.data.main.temp);
+
   h1.innerHTML = `${city}`;
   temperatureElement.innerHTML = `${temp}`;
   descriptionElement.innerHTML = `${description}`;
@@ -63,8 +66,32 @@ function currentCity(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+function showFahrTemp(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  celLink.classList.remove("active");
+  fahrLink.classList.add("active");
+  let fahrTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML= Math.round(fahrTemp);
+}
+
+function showCelTemp(event){
+  event.preventDefault();
+  celLink.classList.add("active");
+  fahrLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", currentCity);
 
 let searchForm = document.querySelector("#search-city");
 searchForm.addEventListener("submit", submitCity);
+
+let celsiusTemperature = null;
+
+let fahrLink = document.querySelector("#fahr-link");
+fahrLink.addEventListener("click", showFahrTemp);
+
+let celLink = document.querySelector("#cel-link");
+celLink.addEventListener("click", showCelTemp);
