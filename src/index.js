@@ -26,19 +26,22 @@ function showWeather(response) {
   let icon = response.data.weather[0].icon;
   let h1 = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
-  let descriptionElement= document.querySelector("#description");
-  let humidityElement= document.querySelector("#humidity");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let iconElement =document.querySelector("#icon");
+  let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = Math.round(response.data.main.temp);
 
   h1.innerHTML = `${city}`;
   temperatureElement.innerHTML = `${temp}`;
   descriptionElement.innerHTML = `${description}`;
-  humidityElement.innerHTML= `${humidity}`;
-  windElement.innerHTML=`${wind}`;
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+  humidityElement.innerHTML = `${humidity}`;
+  windElement.innerHTML = `${wind}`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
 
 function citySearch(cityId) {
@@ -66,16 +69,16 @@ function currentCity(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function showFahrTemp(event){
+function showFahrTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
   celLink.classList.remove("active");
   fahrLink.classList.add("active");
   let fahrTemp = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML= Math.round(fahrTemp);
+  temperatureElement.innerHTML = Math.round(fahrTemp);
 }
 
-function showCelTemp(event){
+function showCelTemp(event) {
   event.preventDefault();
   celLink.classList.add("active");
   fahrLink.classList.remove("active");
