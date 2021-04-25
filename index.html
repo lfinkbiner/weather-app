@@ -14,26 +14,28 @@
 <body>
     <div class="container">
         <div class= "weather-app">
-        <form id="search-city">
-            <div class="row">
-                <div class="col-9">
-                    <input type="search" id="city-input" placeholder="🔍" autofocus="on">
+            <form id="search-city">
+                <div class="row">
+                    <div class="col-9">
+                        <input type="search" id="city-input" placeholder="🔍" autofocus="on">
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" value="search" class ="btn btn-primary w-100">
+                    </div>
                 </div>
-                <div class="col-3">
-                    <input type="submit" value="search" class ="btn btn-primary w-100">
-                </div>
-            </div>
-        </form>
-        <h1 id="city"></h1>
-        <ul>
-            <li id ="day"></li>
-            <li id="description"></li>
-        </ul>
+            </form>
+        <div class="overview">  
+            <h1 id="city"></h1>
+            <ul>
+                <li><span id ="date"></span></li>
+                <li id="description"></li>
+            </ul>
+        </div>
         <div class="row">
             <div class="col-6">
                 <div class= "clearfix weather-temperature">
                     <img 
-                        src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" 
+                        src="" 
                         alt="Clear"
                         id= "icon"
                         class="float-left"
