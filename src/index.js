@@ -20,7 +20,25 @@ currentDay();
 function displayForecast(){
   let forecastElement =document.querySelector("#forecast");
 
-  forecastElement.innerHTML ="Forecast";
+  let forecastHTML = `<div class="row">`;
+  let days =["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function(day){ forecastHTML = forecastHTML + `
+                <div class="col-2">
+                    <div class="weather-forecast-date">
+                    ${day}
+                    </div>
+                    <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42" />
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max">
+                            18°</span>
+                        <span>
+                            12°</span class="weather-forecast-temperature-min">
+                    </div>
+                </div>`;
+
+  });
+  forecastHTML = forecastHTML + `</div>`
+  forecastElement.innerHTML=forecastHTML;
 }
 
 function showWeather(response) {
@@ -97,8 +115,9 @@ searchForm.addEventListener("submit", submitCity);
 
 let celsiusTemperature = null;
 
-displayForecast();
 currentCity();
+displayForecast();
+
 
 let fahrLink = document.querySelector("#fahr-link");
 fahrLink.addEventListener("click", showFahrTemp);
