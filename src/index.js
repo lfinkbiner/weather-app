@@ -17,6 +17,12 @@ function currentDay() {
 }
 currentDay();
 
+function displayForecast(){
+  let forecastElement =document.querySelector("#forecast");
+
+  forecastElement.innerHTML ="Forecast";
+}
+
 function showWeather(response) {
   let city = response.data.name;
   let temp = Math.round(response.data.main.temp);
@@ -64,8 +70,7 @@ function showPosition(position) {
   axios.get(apiUrl).then(showWeather);
 }
 
-function currentCity(event) {
-  event.preventDefault();
+function currentCity() {;
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
@@ -85,13 +90,15 @@ function showCelTemp(event) {
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = celsiusTemperature;
 }
-let currentButton = document.querySelector("#current");
-currentButton.addEventListener("click", currentCity);
+
 
 let searchForm = document.querySelector("#search-city");
 searchForm.addEventListener("submit", submitCity);
 
 let celsiusTemperature = null;
+
+displayForecast();
+currentCity();
 
 let fahrLink = document.querySelector("#fahr-link");
 fahrLink.addEventListener("click", showFahrTemp);
