@@ -15,8 +15,14 @@
     <div class="container">
         <div class= "weather-app">
         <form id="search-city">
-            <input type="search" id="city-input" placeholder="🔍" autofocus="on">
-            <input type="submit" value="search">
+            <div class="row">
+                <div class="col-9">
+                    <input type="search" id="city-input" placeholder="🔍" autofocus="on">
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="search" class ="btn btn-primary w-100">
+                </div>
+            </div>
         </form>
         <h1 id="city"></h1>
         <ul>
@@ -50,21 +56,6 @@
             </div>
         </div> 
         <div class="weather-forecast" id="forecast">
-            <div class="row">
-                <div class="col-2">
-                    <div class="weather-forecast-date">
-        
-                    </div>
-                    Thu
-                    <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42" />
-                    <div class="weather-forecast-temperatures">
-                        <span class="weather-forecast-temperature-max">
-                            18°</span>
-                        <span>
-                            12°</span class="weather-forecast-temperature-min">
-                    </div>
-                </div>
-            </div>
         </div>
         </div>
     <a href="https://github.com/lfinkbiner/weather-app" target="_blank">
